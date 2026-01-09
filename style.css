@@ -382,7 +382,7 @@ header .container {
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 18px 15px 8px 15px;
+  padding: 24px 15px 10px 15px;
   border: 2px solid #e0e0e0;
   border-radius: 12px;
   font-family: inherit;
