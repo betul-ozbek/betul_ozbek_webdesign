@@ -14,6 +14,9 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1,
@@ -30,6 +33,7 @@ h4 {
   padding: 0 20px;
 }
 
+/* HEADER & NAVIGATION */
 header {
   background-color: #ffffff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -95,6 +99,7 @@ header .container {
   transform: translateY(-2px);
 }
 
+/* HOME PAGE - HERO */
 .hero-section {
   background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)),
     url("assets/meeting.jpg");
@@ -122,6 +127,7 @@ header .container {
   color: #ecf0f1;
 }
 
+/* BUTTONS */
 .btn-primary {
   display: inline-block;
   background-color: #6366f1;
@@ -137,6 +143,25 @@ header .container {
   background-color: #4f46e5;
 }
 
+.btn-secondary {
+  display: inline-block;
+  background-color: transparent;
+  color: #6366f1;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  border: 2px solid #6366f1;
+  transition: all 0.3s;
+  margin-top: 25px;
+}
+
+.btn-secondary:hover {
+  background-color: #6366f1;
+  color: white;
+}
+
+/* HOME PAGE - ABOUT PREVIEW */
 .about-section {
   padding: 80px 0;
   background-color: #f9f9f9;
@@ -157,6 +182,7 @@ header .container {
   color: #555;
 }
 
+/* HOME PAGE - SERVICES PREVIEW */
 .content-section {
   padding: 80px 0;
   text-align: center;
@@ -196,6 +222,7 @@ header .container {
   font-size: 1.3rem;
 }
 
+/* HOME PAGE - CONTACT SECTION */
 .contact-section {
   padding: 100px 0;
   background: linear-gradient(135deg, #1a252f 0%, #2c3e50 50%, #34495e 100%);
@@ -323,6 +350,7 @@ header .container {
   font-size: 0.95rem;
 }
 
+/* CONTACT FORM */
 .contact-form {
   flex: 1;
 }
@@ -440,13 +468,221 @@ header .container {
   transform: translateX(5px);
 }
 
+/* PAGE HEADER */
+.page-header {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.page-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  font-size: 1.1rem;
+  color: #bdc3c7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ABOUT PAGE */
+.about-detail {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.about-content h3 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+.values-section {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.values-section h3 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.value-box {
+  background: #ffffff;
+  padding: 35px 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.value-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.value-box h4 {
+  color: #6366f1;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.value-box p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.team-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.team-section h3 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* SERVICES PAGE */
+.services-detail {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.service-item {
+  background: #f9f9f9;
+  padding: 40px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  border-left: 4px solid #6366f1;
+}
+
+.service-item:last-child {
+  margin-bottom: 0;
+}
+
+.service-item h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.service-item p {
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.service-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-item ul li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  color: #555;
+}
+
+.service-item ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #6366f1;
+  font-weight: bold;
+}
+
+.cta-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  text-align: center;
+  color: white;
+}
+
+.cta-section h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.cta-section .btn-primary {
+  background-color: white;
+  color: #6366f1;
+}
+
+.cta-section .btn-primary:hover {
+  background-color: #f0f0f0;
+}
+
+/* CONTACT PAGE */
+.contact-page {
+  padding: 80px 0;
+  background-color: #f4f4f4;
+  flex: 1;
+}
+
+.contact-page .contact-container {
+  background: transparent;
+}
+
+.contact-page .info-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+.contact-page .info-card:hover {
+  background: #f9f9f9;
+  border-color: #6366f1;
+}
+
+.contact-page .info-content strong {
+  color: #2c3e50;
+}
+
+.contact-page .info-content p {
+  color: #555;
+}
+
+.contact-page .info-icon {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+}
+
+/* FOOTER */
 footer {
   background-color: #1a252f;
   color: #ecf0f1;
   text-align: center;
   padding: 30px 0;
+  margin-top: auto;
 }
 
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   header .container {
     flex-direction: column;
@@ -495,5 +731,44 @@ footer {
 
   .form-card {
     padding: 25px;
+  }
+
+  .page-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* TABLET RESPONSIVE */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .contact-container {
+    gap: 30px;
+  }
+
+  .info-card {
+    padding: 20px;
+  }
+
+  .form-card {
+    padding: 30px;
+  }
+
+  .service-item {
+    padding: 30px;
   }
 }
